@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,5 +14,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $market = "Marketplace";
+
+    // return view('welcome', ['market' => $market]);
+    return view('welcome', compact('market'));
 });
